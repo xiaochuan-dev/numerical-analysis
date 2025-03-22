@@ -16,5 +16,5 @@ jobs:
       - name: Install Dep
         run: |
           pip install nbconvert
-          apt install pandoc
-          apt install texlive-xetex texlive-fonts-recommended texlive-plain-generic
+          sudo apt install pandoc
+          sudo apt install texlive-xetex texlive-fonts-recommended texlive-plain-generic
