@@ -18,3 +18,12 @@ jobs:
           pip install nbconvert
           sudo apt install pandoc
           sudo apt install texlive-xetex texlive-fonts-recommended texlive-plain-generic
+      - name: build
+        run: |
+          jupyter nbconvert --to html continued_fraction.ipynb
+      
+      - name: Save
+        uses: actions/upload-artifact@v4
+        with:
+          name: output
+          path: .html
