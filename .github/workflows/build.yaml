@@ -18,7 +18,7 @@ jobs:
           pip install nbconvert
       - name: build
         run: |
-          jupyter nbconvert --to html --output-dir output *.ipynb
+          jupyter nbconvert --to html --output-dir output --embed-images *.ipynb
       - name: Ls
         run: ls output
       - name: Write Index
