@@ -21,3 +21,5 @@ jobs:
           jupyter nbconvert --to html --output-dir output *.ipynb
       - name: Ls
         run: ls output
+      - name: Write Index
+        run: python ./write_index.py
