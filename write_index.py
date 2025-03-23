@@ -5,7 +5,7 @@ html_files = [file for file in os.listdir(directory) if file.endswith('.html')]
 a_str = ''
 
 for html_file in html_files:
-    a_str += f'<a href="/{html_file}">{html_file}</a>'
+    a_str += f'<li><a href="/{html_file}">{html_file}</a></li>'
 
 html_content = f'''
 <!DOCTYPE html>
@@ -16,9 +16,9 @@ html_content = f'''
     <title>Document</title>
 </head>
 <body>
-    <div>
+    <ul>
         {a_str}
-    </div>
+    </ul>
 </body>
 </html>
 '''
